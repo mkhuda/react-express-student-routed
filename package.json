@@ -2,6 +2,7 @@
   "name": "student-app-react-express",
   "version": "1.0.0",
   "scripts": {
+    "postinstall": "npm install && npm install --prefix app",
     "app": "cd app && npm start",
     "server": "nodemon server.js",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run app\""
