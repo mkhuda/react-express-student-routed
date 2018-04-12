@@ -25,7 +25,7 @@ A step to installing bundled here [react-express-student-routed](https://github.
 
 * **Muhammad K Huda** - *JS work* - [Mkhuda](https://github.com/mkhuda)
 
-See also the list of [contributors](https://github.com/mkhuda/eact-express-student-routed/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/mkhuda/react-express-student-routed/contributors) who participated in this project.
 
 ## License
 

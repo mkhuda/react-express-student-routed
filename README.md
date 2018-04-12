@@ -22,7 +22,7 @@ Say what the step will be
 - Run `npm install`
 - Move to `/app` directory and run `npm install` on there, to install react packages (frontend).
 - Install `knex` as global by `npm i knex -g`
-- Run the knex to copy seed, and makes sample work as expected
+- Go back to root folder, and run the knex to copy seed, and makes sample to work as expected
 
 ```
 $ knex migration:latest
@@ -43,7 +43,7 @@ That seed is some data of students for a little demo.
 
 * **Muhammad K Huda** - *JS work* - [Mkhuda](https://github.com/mkhuda)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/mkhuda/react-express-student-routed/contributors) who participated in this project.
 
 ## License
 
