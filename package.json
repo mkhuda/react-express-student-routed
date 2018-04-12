@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "preinstall": "npm install -g knex",
-    "postinstall": "knex migrate:latest && knex seed:run",
+    "heroku-postbuild": "knex migrate:latest && knex seed:run && cd app && npm install",
     "app": "cd app && npm start",
     "server": "nodemon server.js",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run app\""
@@ -15,6 +15,7 @@
     "express-session": "^1.15.6",
     "knex": "^0.14.5",
     "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
     "mysql2": "^1.5.3"
   },
   "devDependencies": {
