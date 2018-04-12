@@ -2,6 +2,7 @@
   "name": "student-app-react-express",
   "version": "1.0.0",
   "scripts": {
+    "preinstall": "knex",
     "postinstall": "knex migrate:latest && knex seed:run",
     "app": "cd app && npm start",
     "server": "nodemon server.js",
