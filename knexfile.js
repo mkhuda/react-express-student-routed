@@ -5,9 +5,9 @@ module.exports = {
   development: {
     client: 'mysql2',
     connection: {
-      database: 'express_student_react',
-      user:     process.env.MYSQL_USER,
-      password: process.env.MYSQL_PASSWORD
+      database: 'mysql://bd71451ac8b6f0:a5221c32@us-cdbr-iron-east-05.cleardb.net/heroku_00575bb32b9053c?reconnect=true',
+      user:     'bd71451ac8b6f0',
+      password: '	a5221c32'
     },
     pool: {
       min: 2,
@@ -21,9 +21,9 @@ module.exports = {
   production: {
     client: 'mysql2',
     connection: {
-      database: 'express_student_react',
-      user:     process.env.MYSQL_USER,
-      password: process.env.MYSQL_PASSWORD
+      database: 'mysql://bd71451ac8b6f0:a5221c32@us-cdbr-iron-east-05.cleardb.net/heroku_00575bb32b9053c?reconnect=true',
+      user:     'bd71451ac8b6f0',
+      password: '	a5221c32'
     },
     pool: {
       min: 2,
