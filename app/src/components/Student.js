@@ -35,7 +35,7 @@ class Student extends Component {
         <Link to="/students"><Button className="primary">Back</Button></Link>
         <div className="d-flex align-items-center justify-content-center h-100">
           {
-            JSON.stringify(this.state.response)
+            JSON.stringify(this.state.response.data)
           }
         </div>
       </header>
