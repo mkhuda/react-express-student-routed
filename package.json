@@ -5,7 +5,7 @@
     "preinstall": "npm install -g knex",
     "heroku-postbuild": "knex migrate:latest && knex seed:run && cd app && npm install",
     "app": "cd app && npm start",
-    "server": "nodemon server.js",
+    "server": "node server.js",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run app\""
   },
   "dependencies": {
