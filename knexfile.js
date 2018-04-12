@@ -5,7 +5,8 @@ module.exports = {
   development: {
     client: 'mysql2',
     connection: {
-      database: 'mysql://bd71451ac8b6f0:a5221c32@us-cdbr-iron-east-05.cleardb.net/heroku_00575bb32b9053c?reconnect=true',
+      host: 'mysql://bd71451ac8b6f0:a5221c32@us-cdbr-iron-east-05.cleardb.net/?reconnect=true',
+      database: 'heroku_00575bb32b9053c',
       user:     'bd71451ac8b6f0',
       password: '	a5221c32'
     },
@@ -21,7 +22,8 @@ module.exports = {
   production: {
     client: 'mysql2',
     connection: {
-      database: 'mysql://bd71451ac8b6f0:a5221c32@us-cdbr-iron-east-05.cleardb.net/heroku_00575bb32b9053c?reconnect=true',
+      host: 'mysql://bd71451ac8b6f0:a5221c32@us-cdbr-iron-east-05.cleardb.net/?reconnect=true',
+      database: 'heroku_00575bb32b9053c',
       user:     'bd71451ac8b6f0',
       password: '	a5221c32'
     },
