@@ -3,10 +3,11 @@ const knex = require('./knex_config');
 module.exports = {
   
   saveSessionViews: (request, result) => {
-    if (request.session.views) {
+    const studentId = request.params.student_id;
+    if (request.session[studentId]) {
       console.log('User already viewed');
     } else {
-      request.session.views = true;
+      request.session[studentId] = 1;
       request.session.save();
       knex('students')
       .where('student_id', '=', request.params.student_id)
