@@ -1,6 +1,8 @@
 # React with Express as API
 
-Project created with Express JS, React JS and Knex
+!['demo'](https://raw.githubusercontent.com/mkhuda/react-express-student-routed/master/demo.png)
+
+Project created with Express JS, React JS and Knex [DEMO](https://react-express-student-app.herokuapp.com)
 
 ## Getting Started
 
