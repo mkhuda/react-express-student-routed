@@ -4,7 +4,7 @@ module.exports = {
   
   saveSessionViews: (request, result) => {
     const studentId = request.params.student_id;
-    if (request.session[studentId]) {
+    if (request.session[studentId] == 1) {
       console.log('User already viewed');
     } else {
       request.session[studentId] = 1;
