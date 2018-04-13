@@ -4,7 +4,7 @@
   "scripts": {
     "preinstall": "npm install -g knex",
     "heroku-postbuild": "knex migrate:latest && knex seed:run && cd app && npm install",
-    "app": "cd app && npm start",
+    "app": "cd app && npm run build",
     "server": "node server.js",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run app\""
   },

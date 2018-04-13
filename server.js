@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+const path = require('path');
 const port = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
 const knex = require('./knex_config');
@@ -13,7 +14,10 @@ server.use(session({
   cookie: { maxAge: 1000000000 },
   resave: false,
   saveUninitialized: true
-}))
+}));
+
+server.use(express.static(path.join(__dirname, 'app/build')));
+
 server.get('/students', (request, result) => {
   knex.select().table('students')
   .then(function(collection){
