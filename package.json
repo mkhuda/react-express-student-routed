@@ -5,8 +5,10 @@
     "preinstall": "npm install -g knex",
     "heroku-postbuild": "knex migrate:latest && knex seed:run && cd app && npm install",
     "app": "cd app && npm run build",
+    "app-dev": "cd app && npm start",
     "server": "node server.js",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run app\""
+    "start": "NODE_ENV=production concurrently --kill-others-on-fail \"npm run server\" \"npm run app\"",
+    "start-dev": "NODE_ENV=development concurrently --kill-others-on-fail \"npm run server\" \"npm run app-dev\""
   },
   "dependencies": {
     "body-parser": "^1.18.2",

@@ -16,7 +16,7 @@ server.use(session({
   saveUninitialized: true
 }));
 
-server.use(express.static(path.join(__dirname, 'app/build')));
+if (process.env.NODE_ENV == 'production') server.use(express.static(path.join(__dirname, 'app/build')));
 
 server.get('/students', (request, result) => {
   knex.select().table('students')

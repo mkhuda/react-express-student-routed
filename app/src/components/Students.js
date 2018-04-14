@@ -6,12 +6,13 @@ import StudentCard from './StudentCard';
 
 class Students extends Component {
   state = {
+    starting: true,
     response: {}
   };
 
   componentDidMount() {
     this.callApi()
-      .then(res => this.setState({ response: res }))
+      .then(res => this.setState({ starting: false, response: res }))
       .catch(err => console.log(err));
   }
 
@@ -29,11 +30,15 @@ class Students extends Component {
   render() {
 
     const students = this.state.response.data;
+    const starting = this.state.starting;
     
     return (
       <section className="h-100">
         <header className="container h-100">
           <Link to="/"><Button className="primary">Back</Button></Link>
+            { 
+              starting && <p>Loading</p>
+            }
           <div className="d-flex align-items-center justify-content-center h-100">
             {
               students && students.map((student) => (
