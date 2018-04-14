@@ -9,7 +9,7 @@ const server = express();
 
 server.use(bodyParser.urlencoded({extended:true}))
 server.use(bodyParser.json());
-server.use(session({ 
+server.use(session({
   secret: 'holaholahola',
   cookie: { maxAge: 1000000000 },
   resave: false,
@@ -20,13 +20,13 @@ if (process.env.NODE_ENV == 'production') server.use(express.static(path.join(__
 
 server.get('/students', (request, result) => {
   knex.select().table('students')
-  .then(function(collection){
+    .then((collection) => {
     result.json({
       error:false,
       data: collection
     })
   })
-  .catch(function(err){
+    .catch((err) => {
     result.status(500).json({
       error:true,
       data:{
@@ -39,13 +39,13 @@ server.get('/students', (request, result) => {
 server.get('/student/:student_id', (request, result) => {
   auth.saveSessionViews(request, result);
   knex('students').where('student_id', request.params.student_id).table('students')
-  .then(function(collection){
+    .then((collection) => {
     result.json({
       error:false,
       data: collection
     })
   })
-  .catch(function(err){
+    .catch((err) => {
     result.status(500).json({
       error:true,
       data:{
